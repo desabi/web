@@ -1,0 +1,22 @@
+
+#esquinasX{
+    
+    /* colocar borde */
+    /* 2 px de grosor */
+    /* solido para que se visualice */
+    /* especificar el color */
+    border: 2px solid #73AD21;
+    
+    /* ancho */
+    width: 400px;
+    
+    /* alto */
+    height: 100px;
+    
+    /* radio del borde */
+    border-radius: 20px;
+    
+    /* separacion del texto desde el borde */
+    padding: 50px;
+    
+}

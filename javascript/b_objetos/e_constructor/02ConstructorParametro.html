@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>Función Constructor, con parámetros</title>
+        
+        <script>
+            
+            /* 2DA FORMA DE CREAR OBJETOS */
+            /* Se utilizan funciones constructor */
+            
+            /* Agregamos un parametro a la funcion */
+            
+            /* Al agregar atributos y funciones se utiliza = */
+            /* No se utiliza : */
+            
+            function Celular(marca) {
+                this.marca = marca;
+                this.servicio = "Telcel";
+                
+                /* Agregamos una funcion */
+                this.imprimir = function() {
+                    return "Marca: " + this.marca + "<br>Servicio: " + this.servicio;
+                }
+            }
+            
+            /* Crear dos objetos utilizando la funcion contructor */
+            var celularA = new Celular("Samsung");
+            var celularB = new Celular("Motorola");
+            
+            /* Acceder a las propiedades */
+            document.writeln("<br>Datos del 1er Celular: <br> " + celularA.imprimir() + "<br>");
+            document.writeln("<br>Datos del 2do Celular: <br>" + celularB.imprimir() + "<br>");
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

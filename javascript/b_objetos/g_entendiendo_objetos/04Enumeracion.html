@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>OBJETOS Y ENUMERACIONES</title>
+        
+        <script>
+            
+            var persona = {
+                nombre : "Abi",
+                edad: 30,
+                
+                imprimir: function() {
+                    return "Nombre: "+ this.nombre + "<br>Edad: " + this.edad + "<br><br>";
+                }
+            };
+            
+            document.write(persona.imprimir());
+            
+            var propiedad;
+            
+            for(propiedad in persona){
+                document.write("Propiedad : " + propiedad + "<br>");
+                document.write("Valor : " + persona[propiedad] + "<br><br>");                
+            }
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

@@ -1,0 +1,53 @@
+<!Doctype html>
+
+<html>
+    
+    <head>
+        <title>SELECTORES DE ATRIBUTOS</title>    
+        
+        <style type="text/css">
+        
+            p[id] {
+                width: 400px;
+                border: 3px dotted;
+            }
+            
+            p[id="parrafo1"] {
+                background-color: chartreuse;
+            }
+            
+            p[id="parrafo2"] {
+                color: blueviolet;    
+            }
+            
+            p[class] {
+                border: 3px double;
+            }
+            
+            p[class="error"] {
+                width: 300px;
+                color: yellow;
+                background-color: red;
+            }
+            
+            p[class="bienvenido"] {
+                width: 400px;
+                color: white;
+                background-color: deepskyblue;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        
+        <h2>Utilizando selectores de atributo</h2>
+        
+        <p id="parrafo1"> Contenido del primer parrafo</p>
+        <p id="parrafo2"> El parrafo dos tiene este texto</p>
+        
+        <p class="error"> ERROR AL CARGAR LA PAGINA </p>
+        <p class="bienvenido"> bienvenido al sistem</p>
+    </body>
+    
+</html>

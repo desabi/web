@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>PROPIEDADES DE DATOS Y SUS ATRIBUTOS</title>
+        
+        <script>
+            /* Las propiedades de datos poseen dos atirbutos adicionales. 
+               
+               [[Value]] el cual contiene el valor de la propiedad
+               
+               Este atributo es llenado automaticamente cuando creamos una
+               propiedad para un objeto.
+               Todos los valores de la propiedad se almacenan en [[Value]]
+               incluso si el valor es una funcion.
+               
+               [[Writable]] es un valor Booleano que indica si la propiedad
+               se puede escribir.
+               
+               Por defecto todas las propiedades son escribibles, a menos que
+               se especifique lo contrario.
+               
+               Se uutiliza el metodo Object.defineProperty() para definir
+               propiedades de datos. */
+            
+            /* Forma 1 */
+            var personaA = {
+                nombre : "Abi"
+            };
+            
+            /* Forma 2 */
+            var personaB = {};
+            
+            Object.defineProperty(personaB, "nombre", {
+                value: "Diana",
+                enumerable: true,
+                configurable: true,
+                writable: true
+            });
+           
+            /* Cuando se llama al metodo Object.defineProperty() primero checa si
+               una propiedad existe, si la propiedad no existe, es agregada con los
+               atributos especificados en el constructor, como en el ejemplo de
+               nombre del objeto personaB.
+               
+               Cuando utilizamos el metodo Object.defineProperty() para definir una
+               propiedad y sus atributos, es importante especificar todos los atributos
+               ya que los atributos booleanos automaticamente se establecen como falsos. 
+               
+               En el siguiente ejemplo, se crea una propiedad (nombre) que es 
+               no numerable, no configurable y no escribible por que no se especifican
+               a la hora de crear la propiedad. */
+            
+            var personaC = {};
+            
+            Object.defineProperty(personaC, "nombre", {
+                value: "Luis"
+            });
+            
+            document.write("nombre" in personaC); // true
+            document.write(personaC.propertyIsEnumerable("nombre")); // false
+            
+            delete personaC.nombre; // falla
+            document.write("nombre" in personaC); // true
+            
+            personaC.nombre = "Gregorio"; // falla
+            document.write(personaC.nombre) // Luis
+            
+            /* En este ejemplo no podemos hacer nada con la propiedad excepto leer
+               el valor de la propiedad, las otras operaciones estan bloquedas.
+               
+               Si estamos cambiando una propiedad existente, tener en cuenta que solo
+               los atributos que se especifican van a cambiar. */
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

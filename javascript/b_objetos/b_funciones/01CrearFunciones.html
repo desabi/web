@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>CREANDO FUNCIONES</title>
+        
+        <script>
+            
+            /* Hay 2 maneras de crear funciones
+               1. Forma Literal 
+               2. Funcion Constructor */
+            
+            /* 1 Forma Literal */
+            function reflejarA(valor) {
+                return valor;
+            }
+            
+            /*2 Funcion Constructor*/
+            var reflejarB= new Function("valor", "return valor;");
+            
+            /* Ambas funciones hacen lo mismo, retornar unvalor */
+            console.log(reflejarA(4));
+            console.log(reflejarB(9));
+            
+            /* Siempre debemos crear funciones utilizandola forma literal (1)
+               
+               Usar la funcion constructor (2) no es recomendado debido a los
+               retos que se presentan a la hora de darle mantenimiento, lectura
+               y depuracion
+               
+               Crear funciones es mas facil y menos propenso a errores cuando
+               usamos la forma literal (1)
+               */
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

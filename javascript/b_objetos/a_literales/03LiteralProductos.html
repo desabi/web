@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acceso a Atributos</title>
+
+    <script>
+        
+        /* 1ER FORMA DE CREAR OBJETOS */
+        /* De forma literal  */
+        
+        /* Se puede acceder a los atributos de los objetos de maneras diferentes */
+        
+        /* Creamos los objetos */
+        
+        var laptop = {
+            marca : "HP",
+            precio : 19700
+        };
+
+        var tenis = {
+            color : "azules",
+            costo : 2300
+        };
+
+        /* 1ra forma de acceder a los datos de un objeto */
+        document.write("Datos de la laptop<br>");
+        document.write("Marca: " + laptop.marca + "<br>");
+        document.write("Precio: " + laptop.precio + "<br><br>");
+    
+        /* 2da forma de acceder a los datos de un objeto */
+        document.write("Datos de los tenis<br>");
+        document.write("Color: " + tenis['color'] + "<br>");
+        document.write("Costo: " + tenis['costo'] + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

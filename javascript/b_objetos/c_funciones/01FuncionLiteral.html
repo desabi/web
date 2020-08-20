@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos y Funciones</title>
+
+    <script>
+        
+        /* Crear objetos de manera literal */
+        
+        /* Se crea el objeto perro con sus atributos */
+        /* Se agrega la funcion ladrar al objeto perro */
+        
+        var perro = {
+            nombre : "Benji",
+            
+            ladrar: function() {
+                return "Woof! Woof!";
+            }
+        };
+
+        /* Forma de acceder a los datos del objeto perro */
+        document.write("<br>Informacion del perro: ");
+        /* Se accede al atributo nombre */
+        document.write("<br>Nombre: " + perro.nombre);
+        /* Se accede a la funcion ladrar() */
+        document.write("<br>Ladrar: " + perro.ladrar() );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

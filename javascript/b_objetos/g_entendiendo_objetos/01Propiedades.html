@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>OBJETOS Y PROPIEDADES</title>
+        
+        <script>
+            
+            /* Creamos dos objetos con la propiedad nombre */
+            var persona1 = {
+                nombre : "Nicolas";
+            }
+            
+            var persona2 = new Object();
+            persona2.nombre = "Mario";
+            
+            /* A ambos objetos se le asigna la propiedad edad. 
+               
+               Podemos hacer esto inmediatamente despues de haber
+               creado los obejtos o despues. 
+               
+               Los objetos que creamos siempre estan abiertos para
+               modificaciones, a menos que se especifique lo contrario.
+               
+               Cuando una propiedad es agregada por primera vez a un objeto,
+               Javascript utiliz un meto interno llamado [[Put]] */
+            
+            persona1.edad = 30;
+            persona2.edad = 24;
+            
+            /* Se cambia el valor del nombre de los objetos. El valor
+               de una propiedad ya definida tambien se puede cambiar
+               en cualquier momento.
+               
+               Cuando un nuevo valor es asignado a una propiedad, se lleva 
+               a cabo la operacion [[Set]]. Esta operacion reemplaza el valor
+               actual de la propiedad con el valor nuevo. */
+            
+            persona1.nombre = "Gregorio";
+            persona2.nombre = "Miguel";
+            
+            
+            /* Cuando una propiedad es agregada por primera vez a un objeto,
+               Javascript utiliza un metodo interno llamado [[Put]]
+               
+               Este metodo crea un lugar en el objeto para almacenar la propiedad.
+               
+               Esta operacion no solo especifica el valor inicial, sino tambien
+               algunos atributos de la propiedad.
+               
+               [[Put]] crea una propiedad propia (own property) para el objeto.
+               La cual indica que la instancia de un objeto posee dicha propiedad.
+               
+               La propiedad se almacena directamente en la instancia y todas las
+               operaciones sobre la propiedad deben realizarse a traves de ese objeto. 
+               
+               Existen dos tipos de propiedades: 
+               1. Own Properties       (Propiedad Propia)
+               2. Prototype properties (Propiedades del prototipo) */
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

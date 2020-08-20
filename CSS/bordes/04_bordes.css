@@ -1,0 +1,59 @@
+
+#esquinasA {
+    
+    /* color de fondo */
+    background: orange;
+    
+    /* ancho */
+    width: 200px;
+    
+    /* alto */
+    height: 150px;
+    
+    /* bordes */
+    /* borde izquierdo superior: 25px */
+    /* borde derecho superior: 35px */
+    /* borde derecho inferior: 60px */
+    /* borde izquierdo inferior: 85 px */
+    border-radius: 20px 35px 60px 85px; 
+    
+    /* espacio entre la letra y el borde */
+    padding: 25px;
+}
+
+#esquinasB {
+    
+    /* color de fondo */
+    background:red;
+    
+    /* ancho */
+    width: 300px;
+    
+    /* alto */
+    height: 80px;
+    
+    /* bordes */
+    /* izquierdo superior: 15px */
+    /* derecho superior: 50px */
+    /* izquierdo inferior 30px */
+    /* derecho inferior: 50px */
+    border-radius: 15px 50px 35px;
+    
+    /* espacio entre el texto y el borde */
+    padding: 40px;
+    
+}
+
+#esquinasC {
+    background: green;
+    width: 200px;
+    height: 100px;
+    
+    /* izquierdo superior: 15px */
+    /* derecho superior: 50px */
+    /* derecho inferior: 15px */
+    /* izquierdo inferior: 50px */
+    border-radius: 15px 50px; 
+    
+    padding: 50px;
+}

@@ -1,0 +1,21 @@
+
+h2 {
+    color: aqua;
+}
+
+h3 {
+    color:forestgreen;
+}
+
+#info {
+    color:white;
+    background-color: dodgerblue;
+    font-size: 30px;
+}
+
+#error {
+    color: yellow;
+    background-color: red;
+    font-size: 50px;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>ALTERANDO LAS PROPIEDADES DE UN OBJETO</title>
+        
+        <script>
+            
+            /* Crear objetos de manera literal */
+            
+            /* Crear un objeto en blanco */            
+            var laptop = {};
+            
+            /* Las propiedades se pueden agregar despues */
+            /* no se utiliza : */
+            /* se utiliza = */
+            laptop.procesador = "intel";
+            laptop.disco = 256;
+            laptop.ram = 8;
+            
+            /* Agregamos una funcion al objeto */
+            laptop.mensaje = function() {
+                return "Procesador: " + this.procesador + ", Disco Duro de: " + this.disco + " GB, RAM de " + this.ram + "GB.";                 
+            };
+            
+            /* Acceder a los atributos */
+            document.writeln("<br> Datos de la laptop <br>");
+            document.writeln("<br>" + laptop.mensaje() );
+            
+            /* Se puede borrar alguna propiedad del objeto */
+            /* borramos la informacion asociada con el procesador */
+            delete laptop.procesador;
+            
+            /* el dato del procesador aparecera como undefined */
+            document.writeln("<br>" + laptop.mensaje() );
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

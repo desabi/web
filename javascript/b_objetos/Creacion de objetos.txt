@@ -1,0 +1,10 @@
+Se pueden crear objetos utilizando dos mecanismos/enfoques:
+1) notacion literal  (se utiliza :)
+2) constructor (new) (se utiliza =) (object y objetos propios)
+
+
+ECMAScript 2015 (ECMAScript 6 o ES6)
+3) clases
+
+* simplifacion sintactica de los dos enfoques anteriores
+* proporciona una sintaxis mas simpre y clara para manejar constructores, prototypes y herencia.

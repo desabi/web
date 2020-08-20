@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+	   <title>UTILIZANDO JAVASCRIPT</title>
+       
+       <script type="text/javascript">
+            
+            function mostrarTitulo() {
+                var textoTitulo = document.getElementById("titulo");
+                alert("El titulo es\n " + textoTitulo.innerHTML );    
+            }
+            
+            function verMensaje () {
+                var textoMensaje = document.getElementById("mensaje");
+                alert("El mensaje es: " + textoMensaje.innerHTML );    
+            }                
+            
+       </script>
+    </head>
+
+    <body>
+        
+        <h3 id="titulo"> Aprendiendo JavaScript </h3>
+        
+        <p id="mensaje"> JavaScript si es un lenguaje de programación </p>
+        
+        <input type="button" value="Obtener Titulo" onclick="mostrarTitulo()" /> <br /> <br />
+        <input type="button" value="Obtener Mensaje" onclick="verMensaje()" />
+        
+    </body>
+    
+</html>

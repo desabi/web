@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>CREANDO FUNCIONES DE FORMA LITERAL: DIFERENCIAS</title>
+        
+        <script>        
+            
+            /* Aunque las formas de crear funciones de manera literal son similares 
+               1.1 Funcion como declaracion 
+               1.2 Funcion como expresion 
+               Tienen una diferencia importante */
+            
+            /* FUNCIONES COMO DECLARACION */
+            /* Las funciones como declaracion son colocadas en la cima (top) del
+               contexto cuando el codigo es ejecutado.
+               Esto significa que podemos llamar a la funcion y despues crearla */
+            
+            var resultado = suma(5, 2);
+            
+            function suma(n1, n2){
+                return n1 + n2;
+            }
+            
+            document.write(resultado);
+            
+            /* Pareciera que este puede causar un error, pero no. Funciona bien.
+               Esto es por que javascript coloca la funcion como declaracion en 
+               la parte superior, la cima. 
+               El codigo seria interpretado de la manera siguiente 
+                                      
+               function suma(n1, n2){
+                    return n1 + n2;
+               }
+               
+               var resultado = suma(5, 2);
+               
+               */
+            
+            /* FUNCIONES COMO EXPRESION */
+            /* No pasa lo mismo como las funciones como expresiones
+               por que solo puede ser referenciada a traves de variables.
+               El siguiente codigo produce error: */
+            
+            var total = resta(10, 3);
+            
+            var resta = function(n1, n2){
+                return n1 - n2;                
+            };
+            
+            document.write(total);
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

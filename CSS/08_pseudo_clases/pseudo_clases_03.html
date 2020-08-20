@@ -1,0 +1,48 @@
+<!Doctype html>
+
+<html>
+    
+    <head>
+        
+        <title>UTLIZANDO PSEUDO CLASES</title>    
+        
+        <style type="text/css">
+            
+            /* inputs desactivos, disabled */
+            input:disabled {
+                color: aqua;
+                background: gray;
+                border: 3px dotted yellow;
+            }
+            
+            /* inputs de tipo texto activos */
+            input[type="text"]:enabled {
+                color: yellow;
+                background: yellowgreen;
+            }
+            
+            /* inputs de tipo submit activos */
+            input[type="submit"]:enabled {
+                color: greenyellow;;
+                background: blue;
+                font-size: 20px;
+            }
+            
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <h3>PSEUDO CLASES EJEMPLO 2</h3>
+        
+        <form>
+            ID     <input type="text" name="id" value="desactivo" disabled /> <br> <br>
+            Nombre <input type="text" name="nombre" /> <br> <br> <br>
+            <input type="submit" value="desactivo" disabled/> <br> <br>
+            <input type="submit" value="enviar datos" />
+        </form>
+        
+    </body>
+    
+</html>

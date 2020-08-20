@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>TÍTULO DE LA PÁGINA</title>          
+    </head>
+            
+    <script type="text/javascript">
+        
+        function creaElemento() {
+            var elemento = document.createElement("p");
+            elemento.textContent = "Javascript es un lenguaje de programación";
+            
+            document.body.appendChild(elemento);
+        }
+        
+    </script>
+    
+    <body>  
+        
+        <h2>Crear un párrafo de texto</h2>
+        <input type="button" value="Crear parrafo" onclick="creaElemento()" />
+        
+    </body>
+    
+</html>

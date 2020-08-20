@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>Plantilla JQuery</title>          
+		
+        <!-- Incluir la librería de jquery -->
+		<script src="jquery-3.4.1.min.js"></script>
+        
+        <!-- Manipular DOM -->
+		<script>
+            $(document).ready(function () {
+                $("#prueba").text("Hola mundo");
+                $(".prueba").html("<strong>Usado jquery</strong>");
+            });
+		</script>
+        
+    </head>
+
+    <body>
+        <div id="prueba"></div>
+        <div class="prueba"></div>
+    </body>
+    
+</html>

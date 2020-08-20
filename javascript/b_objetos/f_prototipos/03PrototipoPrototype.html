@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>Prototipos y objetos</title>
+        
+        <script>
+            
+            /* CREAR OBJETOS CON CONSTRUCTOR/NEW */
+            
+            /* Crear una funcion constructor */
+            function Persona(nombre, edad) {
+                this.nombre = nombre;
+                this.edad = edad;
+                
+                this.imprimir = function() {
+                    return "Datos<br>Nombre: " + this.nombre + "<br>Edad: " + this.edad + "<br><br>";
+                }                
+            };
+            
+            /* Crear objetos */
+            var juan = new Persona("Juan", 27);
+            var mario = new Persona("Mario", 32);
+            var ana = new Persona("Diana", 29);
+            
+            /* Imprimir los datos, llamar a la funcion imprimir */
+            document.write(juan.imprimir());
+            document.write(mario.imprimir());
+            document.write(ana.imprimir());
+            
+            /* La flexibilidad de los objetos javascript es expresado principalmente
+               a traves de la posibilidad de cambiar su estructura incluso despues 
+               de su creacion */
+            
+            /* El siguiente codigo crea un nuevo  metodo, saludar(), para el objeto juan,
+               sin afectar la estructura del objeto mario, o de otros objetos creados 
+               con ese mismo constructor */            
+            juan.saludar = function() {
+                return "Buen dia " + this.nombre + "<br>";
+            }
+            
+            document.write(juan.saludar());
+            
+            /* Al crear objetos, podemos comenzar desde una estructura comun definida
+               por un constructor y luego personalizar nuestros objetos segun nuestras
+               necesidades */
+            
+            /* Pero, como cambiamos la estructura de todos los objetos creados por
+               un mismo constructor */
+            
+            /* Por ejemplo: despues de haber creado varias instancias utilizando 
+               el constructor Persona, queremos que todas esas instancias tengan
+               el metodo saludar() */
+            
+            /* Podemos hacerlo utilizando una de las mas interesantes caracteristicas 
+               de javascript: prototype */
+            Persona.prototype.saludar = function() {
+                return "Buenos dias " + this.nombre + "<br>" ;
+            }
+            
+            /* Esta asignacion significa que todos los objetos creados utilizando
+               el constructor persona automaticamente tendran a su disposicion el
+               metodo saludar() */
+            
+            /* Este nuevo metodo no esta directamente ligado/unido a cada objeto,
+               pero es accesible como si fuera su metodo */
+            
+            /* el prototype de un objeto es un tipo de referencia a otro objeto */
+            
+            /* Si tratamos de acceder a una propiedad o un metodo de un objeto y
+               este objeto no lo tiene, javascript lo busca entre las propiedades 
+               y metodos de su prototype */
+            
+            /* En la siguiente linea, utilizamos el objeto ana, si tratamos de 
+               acceder al metodo saludar(), javascript no lo encontrara entre
+               los metodos del objeto ana, pero si lo encontrara entre los metodos
+               de su prototype */
+            document.write(ana.saludar() );
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

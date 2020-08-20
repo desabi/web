@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos y Funciones</title>
+
+    <script>
+        
+        /* Crear objetos de manera literal */
+        
+        /* Se crea el objeto persona con sus atributos */
+        /* Se agrega la funcion imprimir al objeto persona */
+        
+        var persona = {
+            nombre : "abi",
+            edad : 30,
+            
+            imprimir: function() {
+                return "Nombre: " + this.nombre + "<br>Edad: " + this.edad + "<br>";
+            }
+        };
+        
+        /* En la funcion imprimir, anteriormente se utilizaba:
+           1. persona.nombre
+           
+           Pero se cambio por: 
+           2. this.nombre
+           
+           - La opcion 1 crea un acoplamiento fuerte entre el objeto y el metodo.
+           - Si cambiamos el nombre de la variable persona, entonces debemos cambiar
+             tambien esa variable en el metodo.
+           - Este tipo de acomplamiento hace que sea dificil usar la misma funcion 
+             para objetos diferentes.
+            
+            Para solucionar estos inconvenientes, se utiliza la opcion 2, la palabra this.
+            Con esto podemos cambiar el nombre del objeto sin ningun inconveniente y reusar
+            la funcion en diferentes objetos.
+            
+            Cada alcance (scope) en javascript tiene el objeto this que representa al objeto
+            esta llamando.
+            En el alcance global, this representa el objeto global (window en el navegador web)
+            
+            Cuando dentro de una funcion se llama a this, y dicha funcion esta unida a un objeto,
+            el valor de this es igual a este objeto.
+            Asi que en lugar de referenciar directamente el nombre de un objeto dentro de un
+            metodo/funcion, podemos utilizar (hacer referencia) a this, como en el ejemplo de 
+            arriba
+            
+           */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

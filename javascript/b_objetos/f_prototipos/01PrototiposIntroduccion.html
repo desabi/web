@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>MANEJO DE PROTOTIPOS</title>
+        
+        <script>
+            
+            /* CREAR OBJETOS DE MANERA LITERAL */
+            
+            /* Crear objetos diferentes con atributos similares */
+            
+            var payaso = {
+                nombre : "Cepillin",
+                edad : 23,
+                
+                verDatos: function() {
+                    return "Nombre: " + this.nombre + "<br>Edad: " + this.edad+ "<br>";
+                }
+            };
+            
+            var maestro = {
+                nombre : "Luis",
+                edad : 34,
+                
+                verDatos: function() {
+                    return "Nombre: " + this.nombre + "<br>Edad: " + this.edad+ "<br>";
+                }
+            };
+            
+            var detective = {
+                nombre : "Arturo",
+                edad : 47,
+                
+                verDatos: function() {
+                    return "Nombre: " + this.nombre + "<br>Edad: " + this.edad+ "<br>";
+                }
+            };
+            
+            document.writeln("Datos del payaso :<br>" + payaso.verDatos() + "<br>");
+            document.writeln("Datos del maestro :<br>" + maestro.verDatos() + "<br>");
+            document.writeln("Datos del dectective :<br>" + detective.verDatos() + "<br>");
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

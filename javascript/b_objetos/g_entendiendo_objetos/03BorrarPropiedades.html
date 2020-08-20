@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>OBJETOS Y ENUMERACIONES</title>
+        
+        <script>
+            
+            /* El operador delete se utiliza para borrar propiedades
+               de un objeto.
+               
+               Este operador llama a la operacion interna [[Delete]]. 
+               Retorna true si se ejecuta correctamente. 
+               Algunas propiedades no pueden ser eliminadas */
+            
+            var persona = {
+                nombre : "Abi",
+                edad : 30
+            }
+            
+            document.write("nombre" in persona); // true
+            
+            delete persona.nombre; 
+            
+            document.write("nombre" in persona); // false
+            document.write(persona.nombre); // undefined
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

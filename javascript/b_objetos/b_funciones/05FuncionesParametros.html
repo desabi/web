@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>FUNCIONES COMO VALORES</title>
+        
+        <script>
+            
+            /* Se define la funcion con un solo parametro nombrado (indicado) */
+            function miFuncion(valor){
+                return valor + "<br>";
+            }
+            
+            /* Llamamos al metodo */
+            document.write(miFuncion("Hola"));  // imprime Hola
+            
+            /* Ningun error se produce cuando agregamos otro parametro */
+            document.write(miFuncion("HOLA", 25));  // imprime HOLA
+            
+            /* Imprime 1 porque solo hay 1 parametro */
+            document.write(miFuncion.length);
+            
+            /* Redefinimos la funcion sin ningun parametro */
+            miFuncion = function() {
+                /* Retorna el primer argumento que es pasado a la funcion*/
+                return arguments[0] + "<br>";
+            }
+            
+            document.write(miFuncion("Hola")); // imprime Hola
+            document.write(miFuncion("BUEN DIA", 25));  // imprime HOLA
+            document.write(miFuncion.length);
+            
+            /* La segunda funcion, funciona igual que la primera, con la diferencia
+               de que ningun parametro es especificado, por lo tanto la propiedad
+               length es de cero */
+            
+            /* La primera funcion es mas facil de entender, porque utiliza un 
+               argumento nombrado, como en otros lenguajes. 
+               
+               La segunda version usa el objeto arguments, puede ser confuso porque
+               no hay ningun argumento nombrado, por lo que debemos leer el cuerpo 
+               de la funcion para determinar si la estructura arguments es utilizada.
+               Es por esto que muchos desarrolladores prefieren evitar el uso del objeto
+               arguments a menos que sea necesario. */
+            
+            /* En la funciones javascript, podemos pasar cualquier cantidad de parametros
+               a cualquier funcion sin causar ningun error.
+               
+               Esto es debido a que los parametros de una funcion son almacenados en una
+               estructura (parecida a un array) llamada arguments, la cual puede crecer
+               para contener cualquier cantidad de valores. Los valores son referenciados
+               a traves de indices numericos. el objeto arguments tiene la propiedad length
+               para determinar cuantos valores contiene. 
+               El objeto arguments esta dispobible automaticamente dentro de cualquier funcion
+               El objeto arguments no es una instancia de Array, por lo tanto no podemos usar
+               los metodos que un array maneja.
+               El numero de argumentos que una funcion espera es guardado en la propiedad
+               length, recordad que una funcion es un objeto, por lo tanto puede tener
+               propiedades
+               La propiedad length indica la ARIDAD de la funcion, es decir la cantidad de
+               parametros que una funcion espera.
+               Saber la aridad de una funcion es importante en javascript por que las funciones
+               no lanzan error si pasamos muchos o pocos argumentos.
+               
+               PARAMETROS QUE COLOCAMOS = PARAMETROS NOMBRADOS
+               
+               Esto significa que los parametros que colocamos en una funcion solo es por convencion.
+               No limita el numero de argumentos que una funcion puede recibir.
+               Javascript no ingnora los parametros que colocamos en una funcion.
+               
+               */
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

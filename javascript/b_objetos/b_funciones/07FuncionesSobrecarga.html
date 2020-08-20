@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>SOBRECARGA DE FUNCIONES</title>
+        
+        <script>
+            /* El hecho de que las funciones no tengan significado, 
+               no quiere decir que no podamos IMITAR la sobrecarga. 
+               
+               Podemos obtener la cantidad de parametros que son pasados
+               en una funcion utilizando el objeto arguments, y podemos
+               usar esa informacion para determinar que hacer. */
+            
+            function hablar(palabra) {
+                
+                if(arguments == 0) {
+                    palabra = "HOLA";
+                }
+                
+                console.log(palabra);
+            }
+            
+            hablar("Buen Dia");
+            hablar();
+            
+            /* La funcion hablar se comporta de manera diferente basado
+               en el numero de argumentos que se la pasa. 
+               
+               Si no se utiliza ningun parametro (arguments === 0) entonces
+               se utiliza una palabra por defecto: HOLA*/
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

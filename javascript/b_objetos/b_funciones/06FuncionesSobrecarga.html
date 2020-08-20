@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>SOBRECARGA DE FUNCIONES</title>
+        
+        <script>
+            
+            /* Veamos que pasa cuando creamos varios metodos con el mismo nombre */
+            function hablar(palabra) {
+                return palabra + "<br>";
+            }
+            
+            function hablar() {
+                return "HOLA <br>";
+            }
+            
+            /* En cualquier otro lenguaje imprimiria Buen Dia */
+            document.write(hablar("Buen Dia")); // pero imprime HOLA
+            
+            /* Cuando definimos multiples metodos con el mismo nombre, la funcion
+               que aparece al ultimo en nuestro codigo es la que es llamada.
+               La primer funcion es ignorada. */
+            
+            /* A continuacion se muestra porque */
+            // 1ra asignacion
+            var gritar = new Function("palabra", "return palabra + '<br>' ;");            
+            // 2da asignacion
+            gritar = new Function("return 'AHHHH <br>';");
+            
+            document.write(gritar("NOOOOOO")); // imprime AHHHH
+            
+            /* La funcion gritar se queda con el valor de la 2da asignacion */
+            
+            /* La sobrecarga es una caracteristica que permite a un mismo metodo 
+               tener varios significados o nombres
+               
+               El significado de una funcion viene dado por el nombre y la cantidad
+               y tipo de parametros.
+               
+               Una funcion puede aceptar un string como argumento.
+               La misma funcion con el mismo nombre puede aceptar dos argumentos numericos
+               El lenguaje determina a que version de la funcion debe llamar, basandose
+               en la cantidad de argumentos que se le pasan. */
+            
+            /* Como se vio en el ejemplo anterior, las funciones en javascript pueden aceptar
+               cualquier cantidad de parametros.
+               
+               El tipo del parametro no se especifica
+               Esto significa que las funciones no tienen un significado 
+               La falta de significado tambien significa la falta de sobrecarga 
+               
+               */
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

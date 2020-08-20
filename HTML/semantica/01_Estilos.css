@@ -1,0 +1,30 @@
+
+header {
+    position:absolute;
+    background-color: forestgreen;
+    width: 50%;
+    top: 50%;
+    bottom: 0%;
+    left: 50%;
+    right: 0%;        
+}
+
+nav {
+    background-color: blueviolet;
+}
+
+section {
+    background-color: chocolate;
+}
+
+article {
+    background-color: dodgerblue;
+}
+
+aside {
+    background-color: crimson;
+}
+
+footer {
+    background-color: darkolivegreen;
+}

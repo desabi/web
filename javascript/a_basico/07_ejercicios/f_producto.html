@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+    <head>
+	   <title>UTILIZANDO JAVASCRIPT</title>
+        
+       <script type="text/javascript">
+           
+           var nombre = prompt("Escribe el nombre del producto: ");
+           var precioTexto = prompt("Escribe el precio: ");
+           var cantidadTexto = prompt("Escribe la cantidad a comprar: ");
+           
+           var precio = parseFloat(precioTexto);
+           var cantidad = parseInt(cantidadTexto);
+           
+           var total = precio * cantidad;
+           
+           document.write("<br>Nombre del producto: " + nombre );
+           document.write("<br>Precio: " + precio );
+           document.write("<br>Cantidad a comprar: " + cantidad );
+           document.write("<br>");
+           document.write("<br>Total a pagar = " + total);
+       
+       </script>
+        
+    </head>
+
+    <body>
+
+    </body>
+    
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>CREANDO FUNCIONES DE FORMA LITERAL</title>
+        
+        <script>
+            
+            /* 1. Forma literal
+               1.1 funcion como declaracion
+               1.2 funcion como expresion */
+            
+            /* 1.1 Funcion como declaracion */
+            function sumaA(n1, n2){
+                return n1 + n2;
+            }
+            
+            /* 1.2 Funcion como expresion
+               - Funcion anonima: la funcion no tiene nombre
+               - Son referenciadas mediante una variable o propiedad 
+               - En este ejemplo, se asigna un valor (el resultado) a
+                 la variable sumaB
+                 */
+            var sumaB = function(n1, n2){
+                return n1 + n2;
+            };
+            /* Terminan con un punto y coma, como si estuvieramos asignando
+               un valor:
+               var sumaB = 4;
+               */
+            
+            document.write( sumaA(3, 4) );
+            
+            // document.write(sumaB(9, 2));
+            /* Las funciones como expresion
+               son referenciadas mediante una variable o propiedad */
+            var r = sumaB(8, 5);
+            document.write(r);
+            
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

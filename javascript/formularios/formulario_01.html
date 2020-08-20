@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manipulando Botón</title>
+</head>
+
+<body>
+    <form name="formulario_a">
+        <input type="button" name="miBoton" value="Boton cliqueado 0 veces" />
+    </form>
+
+    <script>
+
+        var elBoton = document.formulario_a.miBoton;
+        var numeroClics = 0;
+
+        function clicsBoton(){
+            numeroClics++;
+            elBoton.value = "Boton cliqueado " + numeroClics + " veces";
+        }
+
+        elBoton.addEventListener("click", clicsBoton);
+
+    </script>
+</body>
+
+</html>

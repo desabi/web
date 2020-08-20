@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos dentro de objetos</title>
+
+    <script>        
+        
+        /* Crear objetos de manera literal */
+        
+        /* Se puden colocar objetos dentro de otros objetos */
+        /* En este caso el objeto principal es el libro */
+        /* y el objeto anidado es el autor */
+        
+        var libro = {
+            titulo : "JavaScript",
+            publicacion : 2017,
+            
+            /* objeto anidado */
+            autor : {
+                nombre: "Ved",
+                apellido: "Antani"
+            }
+            
+        };
+        
+        /* Acceder a los atributos del objeto principal: libro */
+        document.write("Datos del libro<br>");
+        document.write("El titulo es: " + libro.titulo + "<br>");
+        document.write("Fecha de publicacion: " +libro.publicacion + "<br>");
+
+        /* Acceder a los datos del objeto anidado: autor */
+        document.write("Autor Nombre : " + libro.autor.nombre + "<br>");
+        document.write("Autor Apellido :" + libro.autor.apellido + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+#esquinasZ{
+    
+    /* colocar imagen de fondo */
+    background: url(fondo.jpg);
+    
+    /* establecer el ancho */
+    width: 300px;
+    
+    /* establecer el alto */
+    height: 100px;
+    
+    /* radio del borde */
+    border-radius: 20px;
+    
+    /* separacion del texto de la orilla */
+    padding: 45px;
+}

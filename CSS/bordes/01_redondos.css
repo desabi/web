@@ -1,0 +1,19 @@
+
+#esquinasA{
+    
+    /* color de fondo */
+    background: #73AD21;
+    
+    /* altura del parrafo */
+    height: 100px;
+    
+    /* anchura del parrafo */
+    width: 250px;
+    
+    /* radio del borde */
+    border-radius: 15px;
+    
+    /* separacion del texto dentro del cuadro creado */
+    padding: 30px;
+    
+}

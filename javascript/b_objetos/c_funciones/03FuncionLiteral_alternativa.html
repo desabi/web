@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos y Funciones</title>
+
+    <script>
+        
+        /* Se crea el objeto empleado con sus atributos */
+        /* se agrega la funcion mensaje al objeto empleado */
+        
+        var empleado = {
+            nombre : "Abi",
+            puesto : "Programador",
+            
+            /* ECMAScript 2015 allows us to define methods in literal notation in a more direct form, as in
+               the following example:*/
+            
+            mensaje() {
+                return "Hola, mi nombre es " + empleado.nombre + " y trabajo en el puesto de " + empleado.puesto;
+            }
+        };
+
+        /* Se accede a los atributos y funcion del objeto empleado */
+        
+        document.write("<br>Datos del empleado: ");
+        document.write("<br>Nombre: " + empleado.nombre);
+        document.write("<br>Puesto: " + empleado.puesto);
+        document.write("<br>Mensaje: " + empleado.mensaje());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos y Funciones</title>
+
+    <script>
+        
+        /* Se crea la funcion imprimirParaTodos() */
+        function imprimirParaTodos() {
+            return "Nombre: "+ this.nombre + "<br>Edad: " + this.edad + "<br><br>";
+        }
+        
+        /* Se crean dos objetos literales, que indican que la funcion imprimir sea 
+           igual a la funcion imprimirParaTodos 
+           
+           Las funciones son valores de referencia, por lo que se pueden asignar como
+           valores de propiedad en cualquier objeto/s */
+        var persona1 = {
+            nombre : "Abi",
+            edad : 30, 
+            
+            imprimir : imprimirParaTodos
+        }
+        
+        var persona2 = {
+            nombre : "Brenda",
+            edad : 24,
+            
+            imprimir : imprimirParaTodos
+        }
+        
+        nombre = "Carlos";
+        
+        /* Cuando el metodo imprimir es llamado con el objeto persona1, imprime los datos
+           de la persona1, sucede lo  mismo con el objeto persona2.
+           
+           Esto sucede por que this es establecido cuando la funcion es llamada, por eso
+           this es preciso. */
+        document.write(persona1.imprimir());
+        document.write(persona2.imprimir());
+        
+        /* Llama a la variable global nombre (carlos) y cuando la funcion/metodo
+           imprimirParaTodos() se llama directamente, imprime carlos y undefined (edad no definida)
+           
+           Esto es por que la variable global nombre es considerada como una propiedad del
+           objeto global (window) */        
+        document.write(imprimirParaTodos());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

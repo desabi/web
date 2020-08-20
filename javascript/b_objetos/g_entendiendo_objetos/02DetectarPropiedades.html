@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>OBJETOS: DETECTAR PROPIEDADES</title>
+        
+        <script>
+            /* A veces es necesario verificar si existe una propiedad
+               En el objeto. Para esta tarea se utiliza el operador in
+               
+               Este operador busca una propiedad con un determinado nombre
+               y retorna true si lo encuentra. */
+            
+            var persona = {
+                nombre : "Abi",
+                edad : 30,
+                
+                imprimir: function() {
+                    return "Nombre: " + this.nombre + "<br>Edad: " + this.edad + "<br><br>";
+                }
+            };
+            
+            document.write("nombre" in persona);  // true            
+            document.write("edad" in persona);  // true            
+            document.write("profesion" in persona);  // false            
+            document.write("imprimir" in persona);  // true            
+            
+            /* Recordemos que existen dos tipos de propiedades: 
+               1. Own Properties       (Propiedad Propia)
+               2. Prototype properties (Propiedades del prototipo) 
+               
+               El operador trabaja con los dos tipos de propiedades. 
+               
+               El metodo hasOwnProperty() retorna true solo si una propiedad
+               existe y es una propiedad propia de la instancia de un objeto. */
+            
+            document.write(persona.hasOwnProperty("nombre")); // true
+            
+            /* El objeto persona no tiene la propiedad toString */
+            document.write(persona.hasOwnProperty("toString"));  //false
+            
+            /* El objeto persona no tiene la propiedad toString            
+               Pero su prototype si tiene este metodo */
+            document.write("toString" in persona);   // true            
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

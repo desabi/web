@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>El constructor Object</title>
+        
+        <script>
+            
+            /* Constructor Object() */
+            /* Constructor proporcionado por JavaScript */
+            /* Nos permite crear un objeto genérico */
+            
+            var persona = new Object();
+            
+            /* Colocar atributos a la persona */
+            persona.nombre = "Abi";
+            persona.edad = 30;
+            
+            persona.imprimir = function() {
+                return "Nombre: " + this.nombre + "<br>Edad: " + this.edad +"<br>";
+            };
+   
+            /* Acceder a las propiedades */
+            document.write("<br>Datos de la persona: <br>");
+            document.write("Nombre: " + persona.nombre + "<br>");
+            document.write("Edad: " + persona['edad'] + "<br>");
+            
+            document.write("<br>Imprimir<br> " + persona.imprimir() );
+            
+                        
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

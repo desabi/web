@@ -1,0 +1,33 @@
+
+------------------------------------------------------------------------------------
+Interno:
+------------------------------------------------------------------------------------
+
+<script type="text/javascript">
+
+   // aqui va el codigo javascript 
+   
+</script>
+
+
+------------------------------------------------------------------------------------
+Externo:
+------------------------------------------------------------------------------------
+
+En el head colocar:
+
+HTML4 y HTML5 ->
+
+<script type="text/javascript" src="codigo.js">
+
+
+HTML5 ->
+
+<script src="codigo.js">
+
+
+XHTML ->
+
+<script type="text/javascript" src="codigo.js" />
+
+

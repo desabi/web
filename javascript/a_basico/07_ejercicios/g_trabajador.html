@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+    
+    <head>
+	   <title>UTILIZANDO JAVASCRIPT</title>
+        
+       <script type="text/javascript">
+           
+           var nombre = prompt("Escribe el nombre del trabajador: ");
+           var sueldoPorHoraTexto = prompt("Escribe el sueldo por hora: ");
+           var horasTrabajadasTexto = prompt("Escribe las horas que trabajo: ");
+           
+           var sueldoPorHora = parseFloat(sueldoPorHoraTexto);
+           var horasTrabajadas = parseFloat(horasTrabajadasTexto);
+       
+           var salario = sueldoPorHora * horasTrabajadas;
+           
+           document.write("<br>Nombre del trabajador: " + nombre);
+           document.write("<br>Sueldo por hora: " + sueldoPorHora );
+           document.write("<br>Horas Trabajadas: " + horasTrabajadas );
+           document.write("<br> " );
+           document.write("<br>Salaraio = " + salario );
+           
+       </script>
+        
+    </head>
+
+    <body>
+
+    </body>
+    
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>FUNCIONES COMO VALORES</title>
+        
+        <script>
+            
+            /* Consideremos el siguiente ejemplo */
+            function saludar() {
+                return "Buen día <br>";
+            }
+            
+            document.write(saludar());
+            
+            /* Asiganamos el valor que retorna la funcion saludar a una variable
+               Ambas apuntan a la misma funcion, al llamarlas producen el mismo resultado
+               Al llamar a la funcion saludar, no se colocan los parentesis */
+            var otroSaludo = saludar;
+            
+            /* Imprimirmos la variable otroSaludo, se debe colocar los parentesis */
+            document.write(otroSaludo());
+            
+            /* Para entender mejor como funciona, veamos el mismo codigo pero utilizando
+               Funciones constructor */
+            
+            /* LA funcion constructor muestra mas explicitamente que la funcion despedirse
+               puede ser pasada como cualquier otro objeto
+               Cuando tenemos en mente que las funciones son objetos, mucho del comportamiento
+               empieza a tener sentido */
+            var despedirse = new Function("return 'Hasta luego<br>'; ");
+            document.write(despedirse()); 
+            
+            var otraDespedida = despedirse;
+            document.write(otraDespedida());
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

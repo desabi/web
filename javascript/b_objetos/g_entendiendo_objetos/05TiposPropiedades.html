@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>TIPOS DE PROPIEDADES</title>
+        
+        <script>
+            /* Existen dos tipos de propiedades 
+               1. Propiedades de datos
+               2. Propiedades de acceso 
+               
+               Las propiedades de datos contienen un valor (informacion) como
+               la propiedad nombre de objeto persona.
+               
+               Las propiedades de acceso definen una funcion que se llama cuando; 
+               2.1 Se lee una propiedad (getter)
+               2.2 Se escribe una propiedad (setter) */
+            
+            var persona = {
+                _nombre : "abi",
+                
+                get nombre() {
+                    document.write("Leyendo el nombre.");
+                    return this._nombre;
+                },
+                
+                set nombre(valor) {
+                    document.write("Estableciendo nombre a: ", valor);
+                    this._nombre = valor;
+                }
+            };
+            
+            document.write(persona.nombre) ;  // Leyendo el nombre, Abi
+            persona.nombre = "Ana"; // EStableciendo el nombre a Ana
+            document.write(persona.nombre);  // Leyendo el nombre, Ana
+            
+            /* Se define una propiedad de dato llamada _nombre que contiene
+               el valor actual de la propiedad.
+               
+               Tambien se define una propiedad de acceso llamada nombre. 
+               
+               La sintaxis utilizada para definir getter y setter para nombre
+               son parecidas a una funcion, pero sin la palabra function. 
+               
+               Los getter retornan un valor.
+               Los setter reciben un valor que sera asignado a la propiedad.
+               
+               Las propiedades de acceso son utiles cuando se desea que la asignacion
+               de un valor desencadene algun tipo de comportamiento, o cuando la 
+               lectura de un valor requiere el calculo de un valor de retorno deseado.
+               */
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>Función Constructor</title>
+        
+        <script>
+            
+            /* 2DA FORMA DE CREAR OBJETOS */
+            /* Se utilizan funciones constructor */
+            
+            /* Al agregar atributos se utiliza = */
+            /* No se utiliza : */
+            
+            function Heroe() {
+                this.ocupacion = "Ninja";
+            }
+            
+            /* Crear un objeto utilizando la funcion contructor */
+            var elHeroe = new Heroe();
+            
+            /* Acceder a las propiedades */
+            document.writeln("<br>Ocupacion del Heroe: " + elHeroe.ocupacion + "<br>");
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>

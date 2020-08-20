@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8" />        
+        <title>PROPIEDADES Y SUS ATRIBUTOS</title>
+        
+        <script>            
+            /* Interactuar con los atributos (interno) de una propiedad.
+            
+               Existen 2 atributos comunes para
+               a). propiedades de datos
+               b). propiedades de acceso 
+               
+               [[Enumerable]] el cual determina si podemos iterar sobre
+               una propiedad o no:
+               enumerable: true
+               enumerable: false
+               
+               [[Configurable]] el cual determina si una propiedad puede
+               ser cambiada.
+               configurable: true
+               configurable: false
+               
+               Se puede eliminar una propiedad si es configurable (true) y
+               se pueden cambiar sus atributos en cualquier momento.
+               Esto tambien significa que una propiedad configurable puede
+               ser cambiada de propiedad de datos a propiedad de acceso y
+               viceversa. 
+                
+               Por defecto, todas las propiedades que creamos en un objeto
+               son enumerables y configurables. 
+               
+               Si queremos cambiar los atributos de las propiedades utilizamos
+               el metodo Object.defineProperty(), el cual acepta 3 argumentos:
+               1. El objeto que posee la propiedad.
+               2. El nombre de la propiedad.
+               3. El descriptor de propiedad(objeto) que contiene los atributos a establecer.
+               
+               El descriptor tiene propiedades con el mismo nombre que los atributos
+               internos pero sin los corchetes:
+               
+               [[Enumerable]] -> enumerable
+               [[Configurable]] -> configurable
+               
+               El siguiente ejemplo hace que una propiedad sea no numerable y no configurable.
+               
+               */
+            
+            var persona = {
+                nombre: "Abi"
+            };
+            
+            /* Hacer que la propiedad nombre sea no numerable */
+            Object.defineProperty(persona, "nombre", {
+                enumerable: false
+            });
+            
+            document.write("nombre" in persona); // true
+            document.write(persona.propertyIsEnumerable("nombre")); // false
+            
+            /* Hacer que la propiedad nombre sea no configurable 
+               La propiedad no puede ser cambiada, los intentos para
+               borrarla fallaran */
+            
+            Object.defineProperty(persona, "nombre", {
+               configurable: false
+            });
+            
+            delete persona.nombre; // no funcionara
+            document.write("nombre" in persona); // true
+            document.write(persona.nombre);  // Abi
+            
+            /* La siguiente linea de codigo intenta hacer la propiedad nombre
+               configurable otra vez (configurable : true).
+               Sin embargo esto causara un error ya que una propiedad no configurable
+               no se puede hacer configurable nuevamente.
+               
+               Intentar cambiar una propiedad de datos a una propiedad de acceso
+               o viceversa tambien arrojara error. */
+            
+            Object.defineProperty(persona, "nombre", {
+               configurable: true
+            });
+            
+        </script>
+    </head>
+
+    <body>        
+        
+    </body>
+    
+</html>
